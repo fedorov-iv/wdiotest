@@ -54,6 +54,8 @@ exports.config = {
     // from the same test should run tests.
     //
     maxInstances: 10,
+
+    enableVNC: true,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -67,7 +69,11 @@ exports.config = {
         maxInstances: 5,
         //
         browserName: 'chrome',
-        browserVersion: '81.0'
+        browserVersion: '81.0',
+        'selenoid:options': {
+            enableVNC: true,
+        }
+
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
@@ -80,7 +86,12 @@ exports.config = {
         maxInstances: 5,
         //
         browserName: 'firefox',
-        browserVersion: '75.0'
+        browserVersion: '75.0',
+        'selenoid:options': {
+            enableVNC: true,
+        }
+
+
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
